@@ -313,7 +313,7 @@ impl Aligner {
         match self
             .session
             .get(&selector)
-            .consolidation(QueryConsolidation::AUTO)
+            .consolidation(ConsolidationMode::None)
             .accept_replies(zenoh::query::ReplyKeyExpr::Any)
             .res()
             .await
